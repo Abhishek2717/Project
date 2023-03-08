@@ -4,7 +4,7 @@ var map = '';
 		function initialize() {
 			var mapOptions = {
 				zoom: 14,
-				center: new google.maps.LatLng(37.769725, -122.462154),
+				center: new google.maps.LatLng(26.8380, 80.8765),
 				scrollwheel: false
 			};
 
