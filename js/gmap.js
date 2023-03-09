@@ -56,3 +56,5 @@ var map = '';
 			// Google Map
 			loadGoogleMap();
 		});
+
+
