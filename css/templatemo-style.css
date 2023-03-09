@@ -387,7 +387,6 @@ hr {
   max-width: 254px;
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
-  overflow:auto;
 }
 .tm-home-box-2:hover {
   scale: 1.1;
@@ -1249,7 +1248,7 @@ hr {
   transform: scale(1.07);
 }
 .tm-yellow-btn:hover {
-  box-shadow: 1px 1px 12px 9px rgb(116, 116, 20);
+  box-shadow: 1px 1px 12px 9px rgba(4, 254, 117, 0.656);
 }
 .bottom:hover {
   color: purple;
@@ -1513,9 +1512,51 @@ body {
 .tm-city-price-container:hover {
   font-weight: 600;
 }
-.tm-yellow-btn {
-  width: 130px;
+.tm-green-btn{
+  width: 230px;
   height: 40px;
+  position:static;
+  background-color: #e24b00;
+  border: medium none;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 24px auto;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+.heading{
+  color: whitesmoke;
+  margin: auto;
+  display: inline-block
+}
+.heading::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+
+  transition: width .6s ease-in;
+}
+.heading:hover::after {
+  width: 100%;
+}
+.tm-green-btn:hover,
+.tm-green-btn:focus {
+  background-color: #7d2300;
+}
+.tm-green-btn:hover {
+  background-color: #F30C1C;
+  border: 3px solid #e0e6e7;
+  color: #0ebfd6;
+  font-weight: bold;
+}
+
+.tm-yellow-btn {
+  width: 230px;
+  height: 40px;
+  position: relative;
   background-color: #e24b00;
   border: medium none;
   color: #ffffff;
@@ -2542,8 +2583,8 @@ hr {
   transform: scale(1.07);
 }
 .tm-yellow-btn:hover {
-  background-color: #e8bd06;
-  border: 3px solid #0ebfd6;
+  background-color: #F30C1C;
+  border: 3px solid #e0e6e7;
   color: #0ebfd6;
   font-weight: bold;
 }
