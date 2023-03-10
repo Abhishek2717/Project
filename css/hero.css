@@ -86,7 +86,7 @@ body {
 }
 .landing-page .content .text-cont .btn-discover:hover {
   border-color: var(--first-clr);
-  background-color: transparent;
+  background-color:rgba(31, 223, 230, 0.773);
   color: var(--first-clr);
 }
 .landing-page .content .text-cont .btn-play {
@@ -130,7 +130,7 @@ body {
   width: 100%;
   display: block;
   border-radius: 0 0 0 15px;
-  box-shadow: 0 0 15px rgba(224, 15, 15, 0.881);
+  box-shadow: 0 0 15px rgba(15, 224, 206, 0.925);
 }
 
 @media screen and (max-width: 650px) {

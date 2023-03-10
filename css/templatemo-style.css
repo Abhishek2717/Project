@@ -1858,7 +1858,7 @@ hr {
 .tm-tours-box-2-link:hover,
 .tm-tours-box-2-link:focus {
   color: white;
-  background-color: #0dde7c;
+  background-color: #dec20ddf;
 }
 
 .margin-bottom-15 {
@@ -2041,7 +2041,7 @@ hr {
   width: 100%;
 }
 .tm-submit-btn {
-  background: #1df5a9; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+  background: #FCDD44; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
  
    /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d11d', endColorstr='#e8bc06',GradientType=0 ); /* IE6-9 */
@@ -2054,7 +2054,7 @@ hr {
   font-weight: 600;
 }
 .tm-submit-btn:hover {
-  background: #1df5bf;
+  background: #f7da05;
 }
 .contact-social {
   margin-top: 20px;
@@ -2412,7 +2412,12 @@ hr {
   .tm-banner-subtitle {
     font-size: 24px;
   }
+  .picture{
+    height: 100px;
+    width:100px;
+  }
   .tm-banner-inner {
+
     top: 0;
   }
   .tm-banner-link {
