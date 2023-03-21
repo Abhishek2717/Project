@@ -70,6 +70,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+	<style>
+ 
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+    </style>
 
 
 
@@ -182,8 +189,12 @@
 					<div class="tab-content">
 					    <div role="tabpanel" class="tab-pane fade in active tm-white-bg" id="hotel">
 					    	<div class="tm-search-box effect2">
-								<form class="tm-contact-form" action="https://getform.io/f/6286b872-645f-4885-8a6a-7765f8ffbc59"method="POST">
+								<form class="tm-contact-form" action="https://getform.io/f/6286b872-645f-4885-8a6a-7765f8ffbc59"method="POST" enctype="multipart/form-data">
 									<div class="tm-form-inner">
+										<!-- <span>
+											<img src="./img/pay.jpeg" height="400px" width="auto" class="form-control">
+										</span> -->
+										<input type="hidden" name="_gotcha" style="display:none !important">
 										<div class = "form-group">
 											<input type="text" id="contact_name" name="Name" class="form-control" placeholder="Name"  required/>
 										</div>
@@ -194,7 +205,7 @@
 											<input type="email" id="contact_email" name="Email Id" class="form-control" placeholder="Email"  required/>
 										</div>
 										<div class = "form-group">
-											<input type="date" id="contact_date" name="Date of Journey" class="form-control" placeholder="Date of Journey"  required/>
+											<input type="text" id="contact_date" name="Date of Journey" class="form-control"  placeholder="Date of Journey" onfocus="(this.type='datetime-local', minDate='0')"  required/>
 										</div>
 										<!-- <div class = "form-group">
 											<h5> Upload Some Advance Payment Below </h5>
@@ -206,21 +217,31 @@
 										</div>
 
 											<div class="form-group">
-							            	 <select class="form-control">
+							            	 <select id="contact_menu" name="Car" class="form-control">
 												<option value="select">--Select Cars--</option>
-												<option value="sedan">Dezire</option>
-												<option value="sedan">Amaze</option>
-												<option value="sedan">Zest</option>
-												<option value="sedan">Etios</option>
-												<option value="sedan">Honda City</option>
-												<option value="sedan">Verna</option>
-												<option value="sedan">Ertiga</option>
-												<option value="sedan">Innova</option>
-												<option value="sedan">Crysta</option>
-												<option value="sedan">Traveller(17 Seater)</option>
-												<option value="sedan">Traveller(22 Seater)</option>
+												<option value="Dezire">Dezire</option>
+												<option value="Amaze">Amaze</option>
+												<option value="Zest">Zest</option>
+												<option value="Etios">Etios</option>
+												<option value="Honda City">Honda City</option>
+												<option value="Verna">Verna</option>
+												<option value="Ertiga">Ertiga</option>
+												<option value="Innova">Innova</option>
+												<option value="Crysta">Crysta</option>
+												<option value="Traveller(17 Seater)">Traveller(17 Seater)</option>
+												<option value="Traveller(22 Seater)">Traveller(22 Seater)</option>
 											</select>
 							          	</div>
+										<div class="form-group">
+											<input type="number" id="contact_days" name="No of Days" class = "form-control" placeholder = "No of Days">
+										</div>
+										<div class="form-group">
+											<img src="./img/pay.jpeg" id="image" height="400px" width="auto" class="form-control" placeholder = "Minimum Booking Amount:500">
+											<button type="button" onclick="show()" id="btnID" class = "form-control">Minimum Booking Amount 600 Click to Pay</button>
+											</div>
+										<div class="form-group">
+											<input type="text" name="Payment Screenshot" class = "form-control" placeholder = "Payment Screenshot" onfocus="(this.type='file')" required>
+											</div>
 									</div>
 						            <div class="tm-green-gradient-bg text-center">
 						            	<button type="submit" name="Booked" class="tm-yellow-btn">Book</button>
@@ -734,6 +755,7 @@
 
         // $('happening-date').text(moment().add(Math.floor(Math.random() * 365), 'days').format('MMMM Do YYYY'));
 	</script>
+
 	<script type="text/javascript">
 		document.addEventListener('load', preLoader())
 
@@ -742,6 +764,20 @@
 			$('body').removeClass('loading');
 		}
 	</script>
+	
+	<script>
+		function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+	</script>
+	
 	<script type="text/javascript" src="./js/onscrollReveal.js"></script>
  </body>
  </html>
