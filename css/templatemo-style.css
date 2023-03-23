@@ -283,6 +283,24 @@ body {
   transform: scale(1.1);
 }
 
+.tm-green-btn {
+  width: 130px;
+  height: 40px;
+  background-color: #400361;
+  border: medium none;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 24px auto;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+.tm-green-btn:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.495),
+    inset 2px 2px 10px rgba(189, 189, 189, 0.495);
+  transform: scale(1.1);
+}
 .tm-form-inner {
   padding: 42px 30px 42px;
 }
@@ -1251,6 +1269,9 @@ hr {
 .tm-yellow-btn:hover {
   box-shadow: 1px 1px 12px 9px rgba(4, 254, 117, 0.656);
 }
+.tm-green-btn:hover {
+  box-shadow: 1px 1px 12px 9px #0EBFD6;
+}
 .bottom:hover {
   color: purple;
 }
@@ -1557,6 +1578,24 @@ body {
 }
 .tm-yellow-btn:hover,
 .tm-yellow-btn:focus {
+  background-color: #7d2300;
+}
+.tm-green-btn {
+  width: 230px;
+  height: 40px;
+  position: relative;
+  background-color: #e24b00;
+  border: medium none;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 24px auto;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+.tm-green-btn:hover,
+.tm-green-btn:focus {
   background-color: #7d2300;
 }
 .tm-form-inner {
@@ -2575,6 +2614,12 @@ hr {
   transform: scale(1.07);
 }
 .tm-yellow-btn:hover {
+  background-color: #F30C1C;
+  border: 3px solid #e0e6e7;
+  color: #0ebfd6;
+  font-weight: bold;
+}
+.tm-green-btn:hover {
   background-color: #F30C1C;
   border: 3px solid #e0e6e7;
   color: #0ebfd6;
