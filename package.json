@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bind": "^0.1.7",
     "dig": "^0.0.6",
     "express": "^4.18.2",
     "firebase": "^9.18.0",
