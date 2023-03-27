@@ -460,8 +460,39 @@
 
 	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
+
 	<script type="text/javascript" src="js/templatemo-script.js"></script> <!-- Templatemo Script -->
 	<script type="text/javascript" src="js/update-copyrightYear.js"></script> <!--Updating the copyright year-->
+	<script>
+		var instance = new Razorpay({
+			key_id: 'rzp_test_6SVZoE1I1DBdxO',
+			key_secret: 'VcbuVZ7Jx6IFAWPKvkVHBf20',
+		  });
+		  // API signature
+// {razorpayInstance}.{resourceName}.{methodName}(resourceId [, params])
+
+// example
+
+instance.payments.fetch(paymentId)
+instance.payments.all({
+	from: '2016-08-01',
+	to: '2016-08-20'
+  }).then((response) => {
+	// handle success
+  }).catch((error) => {
+	// handle error
+  })
+  instance.payments.all({
+	from: '2016-08-01',
+	to: '2016-08-20'
+  }, (error, response) => {
+	if (error) {
+	  // handle error
+	} else {
+	  // handle success
+	}
+  })
+	</script>
 	<script>
 		// HTML document is loaded. DOM is ready.
 		$(function () {

@@ -240,14 +240,25 @@
                                 <button type="submit" name="Booked" class="tm-green-btn text-center">Book Now</button>    
                             </div>
                             <div class="form-group text-center">
+                               
                                 <a href="tel:+919027385767" class="decor"> <h4> Call for any Queries <i class="fa fa-phone fa-xl fa-rotate-90"> </i> +91 9838694694</h4></a>
                             </div>
-                            
+                            <!-- <div>
+                                <button type="button" id="paymentclick">Pay with Razorpay</button>
+                                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                                
+                            </div>
+                             -->
                         </div>
                        
                     </form>
+                   
                 </div>
-            </section>
+                
+
+
+
+</section>
         
     </div>
     <footer>        
@@ -299,18 +310,96 @@
             </div>
 		
     </footer>
+    
+    
 
 
 	
-   
+    <!-- <script>
+        var orderId ;
+    $(document).ready(function(){
+        var settings = {
+      "url": "/create/orderId",
+      "method": "POST",
+      "timeout": 0,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "data": JSON.stringify({
+        "amount": "50000"
+      }),
+      "theme": {
+        "color": "#3399cc"
+    }
+    };
+    
+    //creates new orderId everytime
+    
+    
+      orderId=response.orderId;
+      console.log(orderId);
+      $("button").show();
+    });
+    
+        document.getElementById('rzp-button1').onclick = function(e){
+            var options = {
+                "key": "rzp_test_6SVZoE1I1DBdxO", // Enter the Key ID generated from the Dashboard
+                "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                "currency": "INR",
+                "name": "Acme Corp",
+                "description": "Test Transaction",
+                "image": "https://example.com/your_logo",
+                "order_id": "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                "handler": function (response){
+                    alert(response.razorpay_payment_id);
+                    alert(response.razorpay_order_id);
+                    alert(response.razorpay_signature)
+                    var settings = {
+                        "url": "/api/payment/verify",
+                        "method": "POST",
+                        "timeout": 0,
+                        "headers": {
+                          "Content-Type": "application/json"
+                        },
+                        "data": JSON.stringify({response}),
+                      }
+                    }
+                }
+                
+            };
+                
+    $.ajax(settings).done(function (response) 
+    { alert(JSON.stringify(response));
+    });
+    
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+    });
+    
+    rzp1.open();
+        e.preventDefault();
+    
+    
+    
+    
+    </script> -->
 
-<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>    
+<script type="text/javascript" src="./server.js"></script>  		<!-- jQuery -->
 <script type="text/javascript" src="js/scrollToTop.js"></script>					<!-- Scroll To Top -->
   <script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
 <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-   <script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+   <script type="text/javascript" src="js/templatemo-script.js"></script>    
+     		<!-- Templatemo Script -->
 <script>
     // HTML document is loaded. DOM is ready.
     $(function() {
@@ -339,7 +428,8 @@
             }
           });
     });
-
+</script>
+<script>
 
 
     // Load Flexslider when everything is loaded.
