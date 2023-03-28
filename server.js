@@ -2,21 +2,26 @@
 const express = require("express");
 const app = express();
 const port = 3650;
-const Razorpay = require('razorpay')
+const Razorpay = require('razorpay');
+
+var orderId ;
 
 var instance = new Razorpay({
   key_id: 'rzp_test_6SVZoE1I1DBdxO',
   key_secret: 'VcbuVZ7Jx6IFAWPKvkVHBf20',
   });
- 
-  var options = {
-    amount: 50000,  // amount in the smallest currency unit
+
+  instance.orders.create({
+    amount: 50000,
     currency: "INR",
-    receipt: "order_rcptid_11"
-  };
-  instance.orders.create(options, function(err, order) {
-    console.log(order);
-  });
+    receipt: "receipt#1",
+    notes: {
+      key1: "value3",
+      key2: "value2"
+    }
+  })
+
+
 
 app.listen(3650, () => {
   console.log("Application started and Listening on port 3000");

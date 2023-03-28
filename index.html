@@ -459,7 +459,29 @@
 	<script type="text/javascript" src="./index.js"></script>
 
 	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyDMC4muX6IQG4nymuroHGQy0WSHkTTsDNo",
+		  authDomain: "travelindia-ec96d.firebaseapp.com",
+		  projectId: "travelindia-ec96d",
+		  storageBucket: "travelindia-ec96d.appspot.com",
+		  messagingSenderId: "821182965818",
+		  appId: "1:821182965818:web:9502d08cb5366e42d5ed03",
+		  measurementId: "G-VPFZSJL248"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+	  </script>
 
 	<script type="text/javascript" src="js/templatemo-script.js"></script> <!-- Templatemo Script -->
 	<script type="text/javascript" src="js/update-copyrightYear.js"></script> <!--Updating the copyright year-->
