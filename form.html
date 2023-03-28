@@ -231,15 +231,17 @@
                             <div class="form-group">
                                 <input type="number" id="contact_days" name="No of Days" class = "form-control" placeholder = "No of Days">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <img src="./img/pay.jpeg" id="image" height="400px" width="auto"  placeholder = "Minimum Booking Amount:500">
                                 <button type="button" onclick="show()" id="btnID" class = "form-control">Minimum Booking Amount 600 Click to Pay</button>
-                                </div>
+                                </div> -->
                             <div class="form-group text-center">
-                                <input type="text" name="Payment Screenshot" class = "form-control" placeholder = "Payment Screenshot" onfocus="(this.type='file')" accept="image/png, image/jpeg" required>
-                                <button type="submit" name="Booked" class="tm-green-btn text-center" >Book Now</button> 
+                                <input type="text" name="Payment Upload any govt Id" class = "form-control" placeholder = "Upload Any Govt Id" onfocus="(this.type='file')" accept="image/png, image/jpeg" required>
+                                <!-- <button type="submit" name="Booked" class="tm-green-btn text-center" >Book Now</button>  -->
                                 <button type = "submit" id="rzp-button1" class = "tm-green-btn text-center"> Pay Now</button>
-                                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>   
+                                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>  
+                                
+                                
                             </div>
                             <div class="form-group text-center">
                                
@@ -336,8 +338,7 @@
           currency: "INR",
           name: "Travel India Lucknow",
           description: "Book your best cabs",
-          image:'./img/log1.png',
-          notes: "For any queries contact on +919027385767",
+          
           handler: function (response) {
             if (
               typeof response.razorpay_payment_id == "undefined" ||
@@ -350,7 +351,7 @@
               });
             } else {
               swal({
-                title: "Thank You!",
+                title: "Hurrah! Your booking is confirmed",
                 icon: "success",
                 button: "Close",
               });
@@ -361,11 +362,12 @@
           },
         };
         var rzp1 = new Razorpay(options);
-        document.getElementById("rzp-button1").onclick = function (
-          e
-        ) {
+        document.getElementById("rzp-button1").onclick = function (e) {
           rzp1.open();
+          formSubmit.open();
           e.preventDefault();
+          //add form response submit option
+          formSubmit.open();
         };
       </script>
     
@@ -451,7 +453,7 @@
         $('body').removeClass('loading');
     }
 </script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     function show() {
 
