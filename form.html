@@ -171,8 +171,8 @@
             <section class="container tm-home-section-1" id="more" >
                 <div class="tm-search-box effect3">
                      
-                    <form method="POST" enctype="multipart/form-data" accept-charset="UTF-8" id="form">
-                        <div class="tm-form-inner">
+                    < <form  action="https://getform.io/f/89b3e894-ade6-4097-80ea-5ab05e411f96"method="POST" enctype="multipart/form-data">
+                        < class="tm-form-inner">
                             <!-- <span>
                                 <img src="./img/pay.jpeg" height="400px" width="auto" class="form-control">
                             </span> -->
@@ -231,23 +231,17 @@
                             <div class="form-group">
                                 <input type="number" id="contact_days" name="No of Days" class = "form-control" placeholder = "No of Days">
                             </div>
-                            <!-- <div class="form-group">
-                                <img src="./img/pay.jpeg" id="image" height="400px" width="auto"  placeholder = "Minimum Booking Amount:500">
-                                <button type="button" onclick="show()" id="btnID" class = "form-control">Minimum Booking Amount 600 Click to Pay</button>
-                                </div> -->
+                            
+                            
                             <div class="form-group text-center">
-                                <input type="text" name="Payment Upload any govt Id" class = "form-control" placeholder = "Upload Any Govt Id" onfocus="(this.type='file')" accept="image/png, image/jpeg" required>
-                                <!-- <button type="submit" name="Booked" class="tm-green-btn text-center" >Book Now</button>  -->
-                                <button type = "submit" id="rzp-button1" class = "tm-green-btn text-center"> Pay Now</button>
-                                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>  
-                                
-                                
+                                <input type="text" name="GOVT Id" class = "form-control" placeholder = "Upload any Govt Id" onfocus="(this.type='file')" accept="image/png, image/jpeg" required>
+                            </div>
+                            <div class = "form-group  text-center">
+                                <button type="submit"  name="Booked" class="tm-green-btn text-center">Book Now</button>    
                             </div>
                             <div class="form-group text-center">
-                               
                                 <a href="tel:+919027385767" class="decor"> <h4> Call for any Queries <i class="fa fa-phone fa-xl fa-rotate-90"> </i> +91 9838694694</h4></a>
                             </div>
-                            
                             
                         </div>
                        
@@ -363,11 +357,10 @@
         };
         var rzp1 = new Razorpay(options);
         document.getElementById("rzp-button1").onclick = function (e) {
-          rzp1.open();
+          
           formSubmit.open();
           e.preventDefault();
-          //add form response submit option
-          formSubmit.open();
+          
         };
       </script>
     
