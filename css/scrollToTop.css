@@ -1,5 +1,5 @@
 /* Preloader */
-/* #preloader {
+#preloader {
 
 	background: #ffffff url("https://tenor.com/view/gg-gif-25328530.gif") ;
 	background-size: 200px 200px;
@@ -11,8 +11,8 @@
 	right: 0;
 	bottom: 0;
 	z-index: 999999;
-	transition: all 0.7s ease;
-} */
+	transition: all 1s ease;
+}
 
 .scroll-up-btn {
 	position: fixed;
